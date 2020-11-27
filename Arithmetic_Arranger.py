@@ -32,3 +32,14 @@ equalsLine = ""
 for i in range(longestOperand):
     equalsLine += "_"
 print(equalsLine)
+answer = 0
+if equation[1] == "+":
+    answer = int(equation[0]) + int(equation[2])
+elif equation[1] == "-":
+    answer = int(equation[0]) - int(equation[2])
+answer = str(answer)
+answerSpaces = ""
+for i in range(longestOperand - len(answer)):
+    answerSpaces += " "
+answer = answerSpaces + answer
+print(answer)
